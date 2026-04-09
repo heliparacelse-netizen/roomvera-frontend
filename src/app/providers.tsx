@@ -1,4 +1,4 @@
-// /roomvera-frontend/src/app/providers.tsx
+
 'use client';
 import { DesignProvider } from '@/contexts/DesignContext';
 import { AuthProvider } from '@/contexts/AuthContext';
