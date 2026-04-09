@@ -1,4 +1,4 @@
-// /roomvera-frontend/src/components/Logo.tsx
+
 'use client';
 import { useColors } from '@/hooks/useColors';
 export function Logo({ size = 'md' }: { size?: 'sm' | 'md' | 'lg' }) {
