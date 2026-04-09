@@ -1,0 +1,7 @@
+/* /roomvera-frontend/src/app/globals.css */
+@tailwind base; @tailwind components; @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+html { scroll-behavior: smooth; } body { font-family: 'DM Sans', sans-serif; -webkit-font-smoothing: antialiased; }
+::-webkit-scrollbar { width: 6px; } ::-webkit-scrollbar-track { background: transparent; } ::-webkit-scrollbar-thumb { background: #D6D3D1; border-radius: 3px; } .dark ::-webkit-scrollbar-thumb { background: #44403C; }
+input[type="range"] { -webkit-appearance: none; height: 4px; border-radius: 2px; background: #E7E5E4; outline: none; } .dark input[type="range"] { background: #44403C; } input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 16px; height: 16px; border-radius: 50%; background: #F97316; cursor: pointer; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
