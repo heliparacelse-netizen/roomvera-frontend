@@ -1,4 +1,4 @@
-// /roomvera-frontend/src/components/Navbar.tsx
+
 'use client';
 import { useState, useEffect } from 'react';
 import { useDesign } from '@/contexts/DesignContext';
