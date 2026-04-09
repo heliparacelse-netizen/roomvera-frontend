@@ -1,4 +1,4 @@
-// /roomvera-frontend/src/app/editeur/[tool]/page.tsx
+
 'use client';
 import { Editor } from '@/components/Editor';
 import { use } from 'react';
