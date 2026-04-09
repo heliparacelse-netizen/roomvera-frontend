@@ -1,4 +1,4 @@
-// /roomvera-frontend/src/components/AffiliateModal.tsx
+
 'use client';
 import { PlacedFurniture } from '@/lib/types';
 import { useColors } from '@/hooks/useColors';
