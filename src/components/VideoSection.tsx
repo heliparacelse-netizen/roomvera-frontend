@@ -1,4 +1,4 @@
-// /roomvera-frontend/src/components/VideoSection.tsx
+
 'use client';
 import { useColors } from '@/hooks/useColors';
 import { useReveal } from '@/hooks/useReveal';
