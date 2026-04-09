@@ -1,4 +1,4 @@
-// /roomvera-frontend/src/app/plateforme/page.tsx
+
 'use client';
 import Link from 'next/link';
 import { TOOLS } from '@/lib/data';
