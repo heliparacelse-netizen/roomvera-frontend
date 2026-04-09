@@ -1,4 +1,4 @@
-// /roomvera-frontend/src/components/ThreePlaceholder.tsx
+
 'use client';
 import { useColors } from '@/hooks/useColors';
 export function ThreePlaceholder() {
