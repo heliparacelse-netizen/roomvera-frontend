@@ -1,4 +1,4 @@
-// /roomvera-frontend/src/components/ui.tsx
+
 'use client';
 import { ReactNode } from 'react';
 import { useColors } from '@/hooks/useColors';
