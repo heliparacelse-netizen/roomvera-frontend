@@ -1,4 +1,4 @@
-// /roomvera-frontend/src/app/forgot-password/page.tsx
+
 'use client';
 import { useState } from 'react';
 import { forgotAPI } from '@/lib/api';
