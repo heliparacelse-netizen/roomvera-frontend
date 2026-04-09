@@ -1,5 +1,5 @@
 const API = process.env.NEXT_PUBLIC_API_URL || '';
-const authHeaders = () => { const t = typeof window !== 'undefined' ? localStorage.getItem('rv-token') : null; return t ? { Authorization: `Bearer ${t}` } : {}; };
+const authHeaders = (): Record<string, string> => { const t = typeof window !== 'undefined' ? localStorage.getItem('rv-token') : null; return t ? { Authorization: `Bearer ${t}` } : {}; };
 
 export async function generateImage(file: File, toolId: string, payload: Record<string, unknown> = {}): Promise<string> {
   const fd = new FormData(); fd.append('image', file); fd.append('payload', JSON.stringify(payload));
