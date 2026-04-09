@@ -1,4 +1,4 @@
-// /roomvera-frontend/src/app/faq/page.tsx
+
 'use client';
 import { useState } from 'react';
 import { FAQ_DATA } from '@/lib/data';
