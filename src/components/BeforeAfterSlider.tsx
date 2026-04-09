@@ -1,4 +1,4 @@
-// /roomvera-frontend/src/components/BeforeAfterSlider.tsx
+
 'use client';
 import { useState, useRef, useCallback } from 'react';
 
