@@ -1,4 +1,4 @@
-// /roomvera-frontend/src/app/equipe/page.tsx
+
 'use client';
 import { TEAM } from '@/lib/data';
 import { useReveal } from '@/hooks/useReveal';
