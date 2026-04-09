@@ -1,4 +1,4 @@
-// /roomvera-frontend/src/contexts/DesignContext.tsx
+
 'use client';
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { DesignMode } from '@/lib/types';
