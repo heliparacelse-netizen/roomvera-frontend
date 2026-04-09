@@ -34,16 +34,14 @@ export default function TarifsPage() {
           {PRICING.map((p, i) => {
             const price = p.price === 0 ? 0 : annual ? Math.round(p.price * 0.8 * 100) / 100 : p.price;
             return (
-              <div key={p.id} className="animate-fade-up relative" style={{ animationDelay: `${i * 0.1}s` }}>
-                <Glass className={`p-6 flex flex-col ${p.popular ? 'ring-2 ring-brand-500' : ''}`}>
-                  {p.popular && <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-bold text-white" style={{ background: c.accent }}>Populaire</span>}
-                  <h3 className="font-display text-lg font-bold mb-1">{p.name}</h3>
-                  <div className="flex items-baseline gap-1 mb-5">{price === 0 ? <span className="font-display text-3xl font-bold">Gratuit</span> : (<><span className="font-display text-3xl font-bold">{price.toFixed(2)}€</span><span className="text-sm" style={{ color: c.muted }}>{p.period}</span></>)}</div>
-                  <div className="flex items-center gap-2 mb-5 pb-5" style={{ borderBottom: `1px solid ${c.border}` }}><i className="fa-solid fa-coins text-xs" style={{ color: c.accent }} /><span className="text-sm" style={{ color: c.fg2 }}>{p.credits === Infinity ? 'Illimités' : `${p.credits} crédits/mois`}</span></div>
-                  <ul className="space-y-2.5 mb-6 flex-1">{p.features.map(f => <li key={f} className="flex items-start gap-2 text-sm" style={{ color: c.fg2 }}><i className="fa-solid fa-check text-xs mt-0.5 text-emerald-500" />{f}</li>)}</ul>
-                  <button onClick={() => handleSelect(p)} className="w-full py-2.5 rounded-xl text-sm font-semibold transition-all hover:-translate-y-0.5 border-none cursor-pointer" style={{ background: p.popular ? c.accent : c.bg2, color: p.popular ? '#fff' : c.fg }}>{p.cta}</button>
-                </Glass>
-              </div>
+              <Glass key={p.id} className={`p-6 flex flex-col animate-fade-up relative ${p.popular ? 'ring-2 ring-brand-500' : ''}`} style={{ animationDelay: `${i * 0.1}s` }}>
+                {p.popular && <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-bold text-white" style={{ background: c.accent }}>Populaire</span>}
+                <h3 className="font-display text-lg font-bold mb-1">{p.name}</h3>
+                <div className="flex items-baseline gap-1 mb-5">{price === 0 ? <span className="font-display text-3xl font-bold">Gratuit</span> : (<><span className="font-display text-3xl font-bold">{price.toFixed(2)}€</span><span className="text-sm" style={{ color: c.muted }}>{p.period}</span></>)}</div>
+                <div className="flex items-center gap-2 mb-5 pb-5" style={{ borderBottom: `1px solid ${c.border}` }}><i className="fa-solid fa-coins text-xs" style={{ color: c.accent }} /><span className="text-sm" style={{ color: c.fg2 }}>{p.credits === Infinity ? 'Illimités' : `${p.credits} crédits/mois`}</span></div>
+                <ul className="space-y-2.5 mb-6 flex-1">{p.features.map(f => <li key={f} className="flex items-start gap-2 text-sm" style={{ color: c.fg2 }}><i className="fa-solid fa-check text-xs mt-0.5 text-emerald-500" />{f}</li>)}</ul>
+                <button onClick={() => handleSelect(p)} className="w-full py-2.5 rounded-xl text-sm font-semibold transition-all hover:-translate-y-0.5 border-none cursor-pointer" style={{ background: p.popular ? c.accent : c.bg2, color: p.popular ? '#fff' : c.fg }}>{p.cta}</button>
+              </Glass>
             );
           })}
         </div>
