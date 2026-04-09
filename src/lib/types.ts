@@ -1,4 +1,4 @@
-// /roomvera-frontend/src/lib/types.ts
+
 export interface Tool { id: string; name: string; icon: string; desc: string; cost: number; img: string; }
 export interface FurnitureItem { id: string; name: string; price: string; affiliateUrl: string; w: number; h: number; svg: string; }
 export interface PlacedFurniture extends FurnitureItem { uid: number; x: number; y: number; }
