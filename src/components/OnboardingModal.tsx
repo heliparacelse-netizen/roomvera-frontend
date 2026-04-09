@@ -1,4 +1,4 @@
-// /roomvera-frontend/src/components/OnboardingModal.tsx
+
 'use client';
 import { useDesign } from '@/contexts/DesignContext';
 import { DesignMode } from '@/lib/types';
