@@ -1,5 +1,5 @@
 'use client';
-import { ReactNode } from 'react';
+import { ReactNode, CSSProperties } from 'react';
 import { useColors } from '@/hooks/useColors';
 
 export function Skeleton({ className = '' }: { className?: string }) { const c = useColors(); return <div className={`animate-pulse rounded-xl ${className}`} style={{ background: c.bg2 }} />; }
@@ -40,9 +40,9 @@ export function EmptyState({ icon, title, desc, action }: { icon: string; title:
   );
 }
 
-export function Glass({ children, className = '' }: { children: ReactNode; className?: string }) {
+export function Glass({ children, className = '', style }: { children: ReactNode; className?: string; style?: CSSProperties }) {
   const c = useColors();
-  return <div className={`rounded-2xl shadow-lg ${className}`} style={{ background: c.card, border: `1px solid ${c.border}`, backdropFilter: 'blur(20px)' }}>{children}</div>;
+  return <div className={`rounded-2xl shadow-lg ${className}`} style={{ background: c.card, border: `1px solid ${c.border}`, backdropFilter: 'blur(20px)', ...style }}>{children}</div>;
 }
 
 export function Btn({ children, variant = 'primary', className = '', ...props }: React.ButtonHTMLAttributes<HTMLButtonElement> & { children: ReactNode; variant?: 'primary' | 'secondary' }) {
