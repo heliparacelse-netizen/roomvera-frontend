@@ -1,7 +1,7 @@
-
 'use client';
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
+import { useDesign } from '@/contexts/DesignContext';
 import { useColors } from '@/hooks/useColors';
 import { CreditBar } from '@/components/CreditBar';
 import { EmptyState, Skeleton } from '@/components/ui';
@@ -10,7 +10,7 @@ import { Project } from '@/lib/types';
 import { fetchProjects } from '@/lib/api';
 
 export default function DashboardPage() {
-  const { user } = useAuth(); const c = useColors();
+  const { user } = useAuth(); const c = useColors(); const { mode, showDesignPicker } = useDesign();
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -33,7 +33,14 @@ export default function DashboardPage() {
   return (
     <div className="pt-24 pb-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="mb-6 animate-fade-up"><h1 className="font-display text-2xl font-bold">Mon Espace</h1></div>
+        <div className="flex items-center justify-between mb-6 animate-fade-up">
+          <h1 className="font-display text-2xl font-bold">Mon Espace</h1>
+          <button onClick={showDesignPicker} className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold border-none cursor-pointer transition-all hover:-translate-y-0.5" style={{ background: c.bg2, color: c.fg2 }}>
+            <i className="fa-solid fa-palette" style={{ color: c.accent }} />
+            Design : {mode === 'minimal' ? 'Minimal' : 'Immersif'}
+            <i className="fa-solid fa-pen text-[10px]" style={{ color: c.muted }} />
+          </button>
+        </div>
         <CreditBar />
         {loading && <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">{[1,2,3].map(i => <Skeleton key={i} className="h-56" />)}</div>}
         {error && <div className="text-center py-12 text-red-500 text-sm">{error}</div>}
