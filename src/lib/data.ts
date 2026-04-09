@@ -1,4 +1,4 @@
-// /roomvera-frontend/src/lib/data.ts
+
 import { Tool, FurnitureItem, StyleOption, SeasonOption, PricingPlan } from './types';
 export const TOOLS: Tool[] = [
   { id: 'add-furniture', name: 'Ajouter du Mobilier', icon: 'fa-couch', desc: 'Meublez une pièce vide avec des meubles stylés.', cost: 1, img: 'https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=600&h=400&fit=crop' },
