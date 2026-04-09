@@ -1,4 +1,4 @@
-// /roomvera-frontend/src/components/Editor.tsx
+
 'use client';
 import { useState, useRef, useCallback, useEffect } from 'react';
 import { PlacedFurniture, ApiError } from '@/lib/types';
