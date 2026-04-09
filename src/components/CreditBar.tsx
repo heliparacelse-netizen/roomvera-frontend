@@ -1,4 +1,4 @@
-// /roomvera-frontend/src/components/CreditBar.tsx
+
 'use client';
 import { useAuth } from '@/contexts/AuthContext';
 import { useColors } from '@/hooks/useColors';
