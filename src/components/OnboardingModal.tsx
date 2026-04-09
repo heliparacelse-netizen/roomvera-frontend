@@ -4,12 +4,15 @@ import { DesignMode } from '@/lib/types';
 import { useState } from 'react';
 
 export function OnboardingModal() {
-  const { completeOnboarding } = useDesign();
+  const { onboarded, completeOnboarding } = useDesign();
   const [hovered, setHovered] = useState<DesignMode | null>(null);
   const options: { mode: DesignMode; title: string; sub: string; img: string; bg: string; txt: string; grad: string }[] = [
     { mode: 'minimal', title: 'Minimal & Clean', sub: 'Interface claire et lumineuse', img: 'https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?w=400&h=300&fit=crop', bg: '#FAFAF9', txt: '#1C1917', grad: 'linear-gradient(to top, #FAFAF9, transparent)' },
     { mode: 'immersive', title: 'Immersif & Créatif', sub: 'Ambiance sombre, focus visuel', img: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=400&h=300&fit=crop', bg: '#1C1917', txt: '#FAFAF9', grad: 'linear-gradient(to top, #1C1917, transparent)' },
   ];
+
+  if (onboarded) return null;
+
   return (
     <div className="fixed inset-0 z-[10000] flex items-center justify-center p-4 animate-fade-in" style={{ background: 'rgba(12,10,9,0.85)', backdropFilter: 'blur(12px)' }}>
       <div className="w-full max-w-2xl animate-fade-up">
