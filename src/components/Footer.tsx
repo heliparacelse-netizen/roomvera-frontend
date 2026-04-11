@@ -1,4 +1,3 @@
-
 'use client';
 import Link from 'next/link';
 import { useColors } from '@/hooks/useColors';
@@ -16,11 +15,11 @@ export function Footer() {
           </div>
           <div>
             <h4 className="font-display font-bold text-sm mb-4" style={{ color: c.fg }}>Plateforme</h4>
-            <div className="flex flex-col gap-2">{[{ l: 'Ajouter du Mobilier', h: '/editeur/add-furniture' }, { l: 'Supprimer un Objet', h: '/editeur/remove-object' }, { l: 'Changer de Style', h: '/editeur/style-swap' }].map(l => <Link key={l.h} href={l.h} className="text-sm no-underline" style={{ color: c.muted }}>{l.l}</Link>)}</div>
+            <div className="flex flex-col gap-2">{[{ l: 'Ajouter du Mobilier', h: '/plateforme' }, { l: 'Supprimer un Objet', h: '/plateforme' }, { l: 'Changer de Style', h: '/plateforme' }].map(l => <Link key={l.h} href={l.h} className="text-sm no-underline" style={{ color: c.muted }}>{l.l}</Link>)}</div>
           </div>
           <div>
             <h4 className="font-display font-bold text-sm mb-4" style={{ color: c.fg }}>Entreprise</h4>
-            <div className="flex flex-col gap-2">{[{ l: 'Tarifs', h: '/tarifs' }, { l: 'FAQ', h: '/faq' }, { l: 'Équipe', h: '/equipe' }].map(l => <Link key={l.h} href={l.h} className="text-sm no-underline" style={{ color: c.muted }}>{l.l}</Link>)}</div>
+            <div className="flex flex-col gap-2">{[{ l: 'Solutions', h: '/solutions' }, { l: 'Tarifs', h: '/tarifs' }, { l: 'FAQ', h: '/faq' }, { l: 'Équipe', h: '/equipe' }].map(l => <Link key={l.h} href={l.h} className="text-sm no-underline" style={{ color: c.muted }}>{l.l}</Link>)}</div>
           </div>
           <div>
             <h4 className="font-display font-bold text-sm mb-4" style={{ color: c.fg }}>Suivez-nous</h4>
