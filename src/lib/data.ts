@@ -1,4 +1,3 @@
-
 import { Tool, FurnitureItem, StyleOption, SeasonOption, PricingPlan } from './types';
 export const TOOLS: Tool[] = [
   { id: 'add-furniture', name: 'Ajouter du Mobilier', icon: 'fa-couch', desc: 'Meublez une pièce vide avec des meubles stylés.', cost: 1, img: 'https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=600&h=400&fit=crop' },
@@ -7,7 +6,7 @@ export const TOOLS: Tool[] = [
   { id: 'style-swap', name: 'Changer de Style', icon: 'fa-palette', desc: "Transformez l'ambiance : scandinave, industriel...", cost: 1, img: 'https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?w=600&h=400&fit=crop' },
   { id: 'seasonal', name: 'Saisons et Météo', icon: 'fa-cloud-sun', desc: 'Été/hiver, jour/nuit, pluie/soleil.', cost: 1, img: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&h=400&fit=crop' },
   { id: 'materials', name: 'Matériaux', icon: 'fa-brush', desc: 'Changez murs et sols instantanément.', cost: 1, img: 'https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600&h=400&fit=crop' },
-  { id: 'pool-water', name: 'Piscine et Eau', icon: 'fa-water', desc: "Remplissez une piscine vide.", cost: 1, img: 'https://images.unsplash.com/photo-1572331165267-854da2b021b1?w=600&h=400&fit=crop' },
+  { id: 'pool-water', name: 'Piscine et Eau', icon: 'fa-water', desc: "Remplissez une piscine vide.", cost: 1, img: 'https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=600&h=400&fit=crop' },
   { id: 'enhance', name: 'Amélioration Photo', icon: 'fa-wand-magic-sparkles', desc: 'Super-résolution, netteté, luminosité.', cost: 1, img: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop' },
 ];
 export const FURNITURE: FurnitureItem[] = [
