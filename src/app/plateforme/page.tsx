@@ -1,9 +1,9 @@
-
 'use client';
 import Link from 'next/link';
 import { TOOLS } from '@/lib/data';
 import { useReveal } from '@/hooks/useReveal';
 import { useColors } from '@/hooks/useColors';
+import { Glass } from '@/components/ui';
 
 export default function PlateformePage() {
   const c = useColors(); const ref = useReveal();
@@ -23,6 +23,15 @@ export default function PlateformePage() {
               <div className="p-4 flex items-center justify-between"><span className="text-sm font-medium" style={{ color: c.fg }}>Ouvrir</span><i className="fa-solid fa-arrow-right text-sm" style={{ color: c.accent }} /></div>
             </Link>
           ))}
+        </div>
+        
+        <div className="mt-10 animate-fade-up">
+          <Glass className="p-8 text-center">
+            <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4" style={{ background: c.glow }}><i className="fa-solid fa-cube text-2xl" style={{ color: c.accent }} /></div>
+            <h3 className="font-display text-xl font-bold mb-2" style={{ color: c.fg }}>Aperçu 3D</h3>
+            <p className="text-sm mb-4" style={{ color: c.fg2 }}>Visualisez vos pièces générées en modèle 3D interactif.</p>
+            <span className="text-xs font-semibold px-4 py-2 rounded-full inline-block" style={{ background: c.bg2, color: c.muted }}>Bientôt disponible (3 crédits)</span>
+          </Glass>
         </div>
       </div>
     </div>
