@@ -9,15 +9,20 @@ interface Ctx { mode: DesignMode; setMode: (m: DesignMode) => void; onboarded: b
 const C = createContext<Ctx>({ mode: 'minimal', setMode: () => {}, onboarded: true, completeOnboarding: () => {}, showDesignPicker: () => {}, colors: MINIMAL });
 
 export function DesignProvider({ children }: { children: ReactNode }) {
-  const [mode, setModeState] = useState<DesignMode>('minimal');
-  const [onboarded, setOnboarded] = useState(() => {
-    if (typeof window === 'undefined') return true;
-    return localStorage.getItem('rv-onboarded') === 'true';
-  });
 
+  const [mode, setModeState] = useState<DesignMode>('minimal');
+  const [onboarded, setOnboarded] = useState(true);
+
+ 
   useEffect(() => {
     const m = localStorage.getItem('rv-design') as DesignMode | null;
+    const o = localStorage.getItem('rv-onboarded');
     if (m) setModeState(m);
+    if (o === 'true') {
+      setOnboarded(true);
+    } else {
+      setOnboarded(false);
+    }
   }, []);
 
   const setMode = (m: DesignMode) => { setModeState(m); localStorage.setItem('rv-design', m); document.documentElement.classList.toggle('dark', m === 'immersive'); };
