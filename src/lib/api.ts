@@ -6,7 +6,6 @@ const authHeaders = (): Record<string, string> => {
 };
 
 const fetchOptions = (customHeaders?: Record<string, string>): RequestInit => ({
-  credentials: 'include', // Important pour CORS
   headers: { ...authHeaders(), ...customHeaders }
 });
 
@@ -47,7 +46,6 @@ export async function checkoutAPI(planId: string) {
   if (!res.ok) throw new Error('Erreur'); return res.json() as Promise<{ url: string }>;
 }
 
-// --- NOUVELLES ROUTES POUR LA VIDEO ET LE 3D ---
 export async function generateVideo(imageUrl: string): Promise<{ videoUrl: string }> {
   const res = await fetch(`${API}/api/generate-video`, { method: 'POST', ...fetchOptions({ 'Content-Type': 'application/json' }), body: JSON.stringify({ imageUrl }) });
   if (!res.ok) throw new Error('Erreur vidéo'); return res.json();
