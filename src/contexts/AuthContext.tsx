@@ -1,4 +1,3 @@
-
 'use client';
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { User } from '@/lib/types';
@@ -10,11 +9,17 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [credits, setCredits] = useState(0);
   const [maxCredits, setMax] = useState(0);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     try {
-      const u = localStorage.getItem('rv-user'); const t = localStorage.getItem('rv-token');
-      if (u && t) { setUser(JSON.parse(u)); fetchCreditsFromAPI(); }
+      const u = localStorage.getItem('rv-user'); 
+      const t = localStorage.getItem('rv-token');
+      if (u && t) { 
+        setUser(JSON.parse(u)); 
+        fetchCreditsFromAPI(); 
+      }
     } catch {}
   }, []);
 
